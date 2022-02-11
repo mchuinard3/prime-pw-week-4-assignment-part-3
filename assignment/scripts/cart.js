@@ -3,16 +3,11 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 let basket = [];
 function addItem(item) {
-for (let i = 0; i < item.length; i++) {
+  basket.push(item);
   if (item.length > 0) {
-    basket.push(item[i]);
-  }
+    }
+    return true;
 }
-  return true;
-}
-console.log('Test - should say true:', addItem(['milk', 'eggs']));
-console.log(basket);
-
-function listItems() {
-  
-}
+console.log(`Basket is ${basket}`);
+console.log('Adding milk (expect true)', addItem('milk'));
+console.log(`Basket is now ${basket}`);
