@@ -12,15 +12,15 @@ console.log('Adding bananas', addItem('bananas'));
 console.log('Adding blueberries', addItem('blueberries'));
 console.log(`Basket is now ${basket}`);
 
-function listItems() {
-  for (let i = 0; i < basket.length; i++) {
-    console.log(basket[i]);
+function listItems(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
     }
   }
-  listItems();
+  listItems(basket);
 
-function empty() {
-  basket.length = 0;
-  return basket;
+function empty(array) {
+  array.length = 0;
+  return array;
 }
-console.log('Basket is empty again (empty array):', empty());
+console.log('Basket is empty again (empty array):', empty(basket));
