@@ -11,3 +11,10 @@ function addItem(item) {
 console.log(`Basket is ${basket}`);
 console.log('Adding milk (expect true)', addItem('milk'));
 console.log(`Basket is now ${basket}`);
+
+function listItems(moreItems) {
+  for (let i = 0; i < basket.length; i++) {
+    }
+    return basket;
+}
+console.log(listItems());
