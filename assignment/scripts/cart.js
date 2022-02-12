@@ -4,6 +4,9 @@ console.log('***** Cart Functions *****');
 let basket = [];
 const maxItems = 5;
 function addItem(item) {
+  while (isFull(basket)) {
+    return false;
+  }
   basket.push(item);
   return true;
 }
@@ -33,3 +36,12 @@ function isFull(array) {
   return true;
 }
 console.log('Does the basket contain 5 or more items:', isFull(basket));
+
+function removeItem(array) {
+  array.indexOf('bananas')
+  array.splice('blueberries');
+  if (array.length === 0) {
+    return null;
+  }
+}
+console.log(removeItem(basket));
