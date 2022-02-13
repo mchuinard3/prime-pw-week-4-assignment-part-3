@@ -4,12 +4,13 @@ console.log('***** Cart Functions *****');
 let basket = [];
 const maxItems = 5;
 function addItem(item) {
-  while (isFull(basket)) {
+  if (isFull(basket)) {
     return false;
   }
   basket.push(item);
   return true;
 }
+
 console.log(`Basket is ${basket}`);
 console.log('Adding milk (expect true)', addItem('milk'));
 console.log('Adding bananas', addItem('bananas'));
@@ -37,11 +38,17 @@ function isFull(array) {
 }
 console.log('Does the basket contain 5 or more items:', isFull(basket));
 
-function removeItem(array) {
-  array.indexOf('bananas')
-  array.splice('blueberries');
-  if (array.length === 0) {
-    return null;
+console.log('Adding eggs', addItem('eggs'));
+console.log('Adding bread', addItem('bread'));
+console.log('Adding jelly', addItem('jelly'));
+
+function removeItem(item) {
+let index = basket.indexOf(item);
+if (index === -1) {
+  return null;
   }
+return basket.splice(index, 1);
+
 }
-console.log(removeItem(basket));
+console.log(removeItem('bread')); //return bread
+console.log(removeItem('grapes')); //return null
